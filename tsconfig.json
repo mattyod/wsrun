@@ -7,6 +7,7 @@
     "outDir": "./build",
     "strict": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "typeRoots": ["./typings", "./node_modules/@types"]
   }
 }

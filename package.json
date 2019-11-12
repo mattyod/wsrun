@@ -70,6 +70,7 @@
     "minimatch": "^3.0.4",
     "split": "^1.0.1",
     "throat": "^4.1.0",
-    "yargs": "^10.0.3"
+    "yargs": "^10.0.3",
+    "jest-changed-files": "^24.9.0"
   }
 }
