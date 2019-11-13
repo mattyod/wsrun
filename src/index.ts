@@ -74,17 +74,17 @@ let yargsParser = yargs
   })
   .group(
     [
+      'if',
+      'ifDependency',
       'fast-exit',
       'collect-logs',
-      'no-prefix',
+      'prefix',
       'rewrite-paths',
       'bin',
       'done-criteria',
       'exclude',
       'exclude-missing',
-      'report',
-      'if',
-      'ifDependency'
+      'report'
     ],
     'Misc Options:'
   )
