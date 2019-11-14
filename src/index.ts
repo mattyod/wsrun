@@ -78,7 +78,7 @@ let yargsParser = yargs
       'ifDependency',
       'fast-exit',
       'collect-logs',
-      'prefix',
+      'no-prefix',
       'rewrite-paths',
       'bin',
       'done-criteria',
@@ -109,10 +109,10 @@ let yargsParser = yargs
       boolean: true,
       describe: 'Collect per-package output and print it at the end of each script'
     },
-    prefix: {
-      default: true,
+    'no-prefix': {
+      default: false,
       boolean: true,
-      describe: 'Prefix output with package name'
+      describe: "Don't prefix with package name"
     },
     'rewrite-paths': {
       default: false,
@@ -213,7 +213,7 @@ let runner = new RunGraph(
     bin: argv.bin,
     fastExit: argv.fastExit,
     collectLogs: argv.collectLogs,
-    addPrefix: argv.prefix,
+    addPrefix: !argv.noPrefix,
     rewritePaths: argv.rewritePaths,
     mode: mode as any,
     recursive: argv.recursive,

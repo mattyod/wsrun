@@ -15,32 +15,31 @@ Mode (choose one):
 Package Options:
   --recursive, -r  Execute the same script on all of its dependencies, too                    [boolean]
   --package, -p    Run only for packages matching this glob. Can be used multiple times.        [array]
-  --changedSince   Runs commands in packages that have changed since the provided source
-                   control branch.                                                             [string]
+  --changedSince   Runs commands in packages that have changed since the provided source control
+                   branch.                                                                     [string]
 
 Misc Options:
   --if                   Run main command only if this condition runs successfully
-  --ifDependency         Run main command only if packages dependencies passed the condition
-                         (not available in parallel mode)                                     [boolean]
+  --ifDependency         Run main command only if packages dependencies passed the condition (not
+                         available in parallel mode)                                          [boolean]
   --fast-exit, -e        If at least one script exits with code > 0, abort                    [boolean]
   --collect-logs, -l     Collect per-package output and print it at the end of each script    [boolean]
-  --prefix               Prefix output with package name                                      [boolean]
+  --no-prefix            Don't prefix with package name                                       [boolean]
   --rewrite-paths        Rewrite relative paths in the standard output, by prepending the
                          <root_folder>/<package_name>.                                        [boolean]
   --bin                  The program to pass the command to                                    [string]
-  --done-criteria        Consider a process "done" when an output line matches the specified
-                         RegExp
+  --done-criteria        Consider a process "done" when an output line matches the specified RegExp
   --exclude, -x          Skip running the command for that package                             [string]
-  --exclude-missing, -m  Skip packages which lack the specified command in the scripts section
-                         of their package.json                                                [boolean]
+  --exclude-missing, -m  Skip packages which lack the specified command in the scripts section of
+                         their package.json                                                   [boolean]
   --report               Show an execution report once the command has finished in each
                          package                                                              [boolean]
 
 Other Options:
   --help             Show help                                                                [boolean]
   --version          Show version number                                                      [boolean]
-  -c                 Denotes the end of the package list and the beginning of the command. Can be
-                     used instead of "--"                                                     [boolean]
+  -c                 Denotes the end of the package list and the beginning of the command. Can be used
+                     instead of "--"                                                          [boolean]
   --concurrency, -y  Maximum number of commands to be executed at once                         [number]
 
 ```
